@@ -86,7 +86,7 @@ export default function Header() {
               alt="Spring Rain Lawn Sprinkler Inc."
               width={180}
               height={54}
-              className="h-10 w-auto"
+              className="h-15 w-auto"
               priority
             />
           </Link>
