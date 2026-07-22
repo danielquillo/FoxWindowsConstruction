@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+html { color-scheme: light;}
+
+:root {
+  --bg: #ffffff;
+  --fg: #171717;
+  --card: #f7f6f3;
+  --border: #e5e5e5;
+  --nav-bg: #ffffff;
+  --nav-fg: #171717;
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, Arial, sans-serif;
+  --font-display: var(--font-poppins), var(--font-sans);
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+@utility font-sans {
+  font-family: var(--font-sans);
+}
+
+/* hide horizontal scrollbar for the services scroller */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
