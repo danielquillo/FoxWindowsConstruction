@@ -1,36 +1,303 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fox Windows Construction Website
+
+> Professional website developed for **Fox Windows Construction** to strengthen the company's online presence, improve local search visibility, showcase completed projects, and generate qualified leads throughout Chicago's North Shore.
+
+![Status](https://img.shields.io/badge/status-In%20Development-blue)
+![Next.js](https://img.shields.io/badge/Next.js-16-black)
+![React](https://img.shields.io/badge/React-19-61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38BDF8)
+![Netlify](https://img.shields.io/badge/Deployment-Netlify-00C7B7)
+
+---
+
+## Live Website
+
+🚧 Coming Soon
+
+Production URL:
+
+🚧 Coming Soon
+
+---
+
+## Project Overview
+
+Fox Windows Construction has built a strong reputation over more than two decades through quality craftsmanship and customer referrals. This project aims to establish a modern digital presence that accurately reflects the company's professionalism while making it easier for homeowners to discover their services online.
+
+The website focuses on:
+
+- Professional company branding
+- Local SEO optimization
+- Mobile-first responsive design
+- Lead generation
+- Portfolio showcase
+- Long-term maintainability
+
+---
+
+## Project Goals
+
+- Create a modern, responsive website
+- Increase visibility in local Google searches
+- Showcase completed projects
+- Generate qualified customer inquiries
+- Improve trust and credibility
+- Provide a scalable foundation for future growth
+
+---
+
+## Features
+
+- Responsive design
+- Portfolio / Gallery
+- Service pages
+- Service Area pages
+- Contact Form
+- Email notifications
+- Google Maps integration
+- Customer testimonials
+- Local SEO optimization
+- Spam protection
+- Secure hosting
+- SSL
+- Ongoing maintenance
+
+---
+
+## Tech Stack
+
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+### Backend
+
+- Netlify Functions
+- Resend
+- Supabase
+
+### Deployment
+
+- Netlify
+
+---
+
+## Project Structure
+
+```
+
+app/
+│
+├── components/
+├── contact/
+├── lib/
+├── portfolio/
+├── service-areas/
+├── services/
+│
+├── globals.css
+├── layout.tsx
+└── page.tsx
+public/
+```
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Clone the repository
+
+```bash
+git clone https://github.com/<username>/FoxWindowsConstruction.git
+
+cd FoxWindowsConstruction
+```
+
+---
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+### Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Development Workflow
 
-To learn more about Next.js, take a look at the following resources:
+Our typical workflow follows these stages:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+Discovery
+    ↓
+Planning
+    ↓
+UI / UX Prototype
+    ↓
+Development
+    ↓
+Testing
+    ↓
+Client Review
+    ↓
+Deployment
+    ↓
+Maintenance
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Branch Strategy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Main Branch
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+main
+```
+
+Production-ready code only.
+
+Feature Branches
+
+```
+feature/hero
+feature/contact-form
+feature/seo
+```
+
+Bug Fixes
+
+```
+fix/mobile-nav
+fix/gallery-lightbox
+```
+
+Whenever possible:
+
+- Create a feature branch
+- Open a Pull Request
+- Review changes
+- Merge into main
+
+---
+
+## Coding Standards
+
+- Use TypeScript
+- Build reusable components
+- Prefer composition over duplication
+- Mobile-first development
+- Optimize all images
+- Keep commits focused and descriptive
+- Write maintainable code before clever code
+
+---
+
+## Deployment
+
+Production deployment is handled through Netlify.
+
+Deployment workflow:
+
+```
+Feature Branch
+
+↓
+
+Pull Request
+
+↓
+
+main
+
+↓
+
+Netlify Production Deploy
+```
+
+---
+
+## Roadmap
+
+✓ Project Planning
+
+✓ Client Proposal
+
+✓ Service Agreement
+
+🚧 Visual & Layout Prototype
+
+⬜ Functional Prototype
+
+⬜ Client Review
+
+⬜ Production Launch
+
+⬜ Ongoing Maintenance
+
+---
+
+## Repository Guidelines
+
+Do not commit:
+
+```
+node_modules/
+.next/
+.netlify/
+.env.local
+```
+
+Always commit:
+
+```
+package.json
+package-lock.json
+.env.example
+```
+
+---
+
+## Contributors
+
+Daniel Quillo
+
+GitHub:
+https://github.com/...
+
+---
+
+Nicolas Antonio Carpio Salaverry
+
+GitHub:
+https://github.com/...
+
+---
+
+## License
+
+© Fox Windows Construction
+
+All Rights Reserved.
+
+This repository contains proprietary source code developed exclusively for Fox Windows Construction.
+
+Unauthorized copying, modification, distribution, or reuse of any portion of this repository is prohibited without written permission from the project owners.
