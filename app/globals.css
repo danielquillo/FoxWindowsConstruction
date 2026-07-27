@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
-html { color-scheme: light;}
+html { 
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
 
 :root {
   --bg: #ffffff;
