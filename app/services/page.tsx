@@ -227,7 +227,7 @@ export default function ServicesPage() {
         </div>
 
         {/* Quick jump links */}
-        <nav
+        {/* <nav
           aria-label="Services on this page"
           className="mt-6 flex flex-wrap gap-2"
         >
@@ -240,7 +240,7 @@ export default function ServicesPage() {
               {service.title}
             </a>
           ))}
-        </nav>
+        </nav> */}
       </section>
 
       {/* Services */}
