@@ -24,8 +24,6 @@ export default function QuoteForm({ className = "" }: { className?: string }) {
       zip: String(form.get("zip") || "").trim(),
       service: String(form.get("service") || "").trim(),
       message: String(form.get("message") || "").trim(),
-
-      //honeypot field (hidden)
       company: String(form.get("company") || "").trim(),
     };
 
@@ -48,84 +46,59 @@ export default function QuoteForm({ className = "" }: { className?: string }) {
   }
 
   return (
-    <form onSubmit={onSubmit} className={`mt-6 grid grid-cols-1 gap-3 ${className}`}>
-      {/* Honeypot (spam trap) */}
-      <input name="company" tabIndex={-1} autoComplete="off" className="hidden" />
+    <form onSubmit={onSubmit} className={`mt-6 flex flex-col gap-3 ${className}`}>
+      <input name="company" tabIndex={-1} autoComplete="off" className="hidden" 
+      />
 
       <div className="grid gap-3 sm:grid-cols-2">
-        <input
-          name="name"
-          required
-          placeholder="Your name"
-          className="h-12 rounded-xl border border-neutral-300 bg-white px-3 text-[16px] outline-none focus:ring-2 focus:ring-neutral-800"
+        <input name="name" required placeholder="Your name" className="h-12 rounded-xl border border-neutral-300 bg-white px-3 text-[16px] outline-none focus:ring-2 focus:ring-neutral-800" 
         />
-        <input
-          name="email"
-          required
-          type="email"
-          placeholder="Email"
-          className="h-12 rounded-xl border border-neutral-300 bg-white px-3 text-[16px] outline-none focus:ring-2 focus:ring-neutral-800"
+        <input name="email" required type="email" placeholder="Email" className="h-12 rounded-xl border border-neutral-300 bg-white px-3 text-[16px] outline-none focus:ring-2 focus:ring-neutral-800" 
         />
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2">
-        <input
-          name="phone"
-          required
-          inputMode="tel"
-          placeholder="Phone"
-          className="h-12 rounded-xl border border-neutral-300 bg-white px-3 text-[16px] outline-none focus:ring-2 focus:ring-neutral-800"
+        <input name="phone" required inputMode="tel" placeholder="Phone" className="h-12 rounded-xl border border-neutral-300 bg-white px-3 text-[16px] outline-none focus:ring-2 focus:ring-neutral-800" 
         />
-        <input
-          name="city"
-          placeholder="City (optional)"
-          className="h-12 rounded-xl border border-neutral-300 bg-white px-3 text-[16px] outline-none focus:ring-2 focus:ring-neutral-800"
+        <input name="city" placeholder="City (optional)" className="h-12 rounded-xl border border-neutral-300 bg-white px-3 text-[16px] outline-none focus:ring-2 focus:ring-neutral-800" 
         />
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2">
-        <input
-          name="zip"
-          inputMode="numeric"
-          placeholder="ZIP (optional)"
-          className="h-12 rounded-xl border border-neutral-300 bg-white px-3 text-[16px] outline-none focus:ring-2 focus:ring-neutral-800"
+        <input name="zip" inputMode="numeric" placeholder="ZIP (optional)" className="h-12 rounded-xl border border-neutral-300 bg-white px-3 text-[16px] outline-none focus:ring-2 focus:ring-neutral-800" 
         />
-        <select
-          name="service"
-          required
-          defaultValue=""
-          className="h-12 rounded-xl border border-neutral-300 bg-white px-3 text-[16px] outline-none focus:ring-2 focus:ring-neutral-800"
-        >
+        <select name="service" required defaultValue="" className="h-12 rounded-xl border border-neutral-300 bg-white px-3 text-[16px] outline-none focus:ring-2 focus:ring-neutral-800">
           <option value="" disabled>
             What do you need help with?
           </option>
-          <option value="Service 1">Service 1</option>
-          <option value="Service 2">Service 2</option>
-          <option value="Service 3">Service 3</option>
+          <option value="Service 1">
+            Service 1
+          </option>
+          <option value="Service 2">
+            Service 2
+          </option>
+          <option value="Service 3">
+            Service 3
+          </option>
         </select>
       </div>
 
-      <textarea
-        name="message"
-        rows={5}
-        placeholder="Briefly describe what you need…"
-        className="rounded-xl border border-neutral-300 bg-white px-3 py-3 text-[16px] outline-none focus:ring-2 focus:ring-neutral-800"
+      <textarea name="message" rows={5} placeholder="Briefly describe what you need…" className="rounded-xl border border-neutral-300 bg-white px-3 py-3 text-[16px] outline-none focus:ring-2 focus:ring-neutral-800" 
       />
 
-      <button
-        type="submit"
-        disabled={status === "sending"}
-        className="h-12 rounded-xl bg-neutral-900 text-white text-[16px] font-medium hover:opacity-95 active:opacity-90 disabled:opacity-60"
-      >
+      <button type="submit" disabled={status === "sending"} className="h-12 mt-auto flex items-center justify-center rounded-xl bg-neutral-900 text-white text-[16px] font-medium hover:opacity-95 active:opacity-90 disabled:opacity-60">
         {status === "sending" ? "Sending..." : "Send request"}
       </button>
-
+      
       {status === "sent" && (
         <p className="text-[13px] text-green-700">
           Sent! We received your request and will get back to you soon.
         </p>
       )}
-      {status === "error" && <p className="text-[13px] text-red-700">{error}</p>}
+      {status === "error" &&
+        <p className="text-[13px] text-red-700">
+          {error}
+        </p>}
 
       <p className="text-[12px] text-neutral-500">
         By submitting, you agree we may contact you by phone/text to coordinate service.
