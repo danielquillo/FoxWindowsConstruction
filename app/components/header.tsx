@@ -12,8 +12,8 @@ const nav = [
   { label: 'Contact', href: '/contact' },
 ];
 
-const PHONE_DISPLAY = '000-000-0000';
-const PHONE_TEL = '0000000000';
+const PHONE_DISPLAY = '847-508-2070';
+const PHONE_TEL = '8475082070';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -78,12 +78,12 @@ export default function Header() {
           <Link
             href="/"
             onClick={handleLogoClick}
-            aria-label="Spring Rain — Home"
+            aria-label="Fox Construction — Home"
             className="absolute left-1/2 -translate-x-1/2 flex items-center md:hidden"
           >
             <Image
-              src={withBasePath('/logo_placeholder.png')}
-              alt="Spring Rain Lawn Sprinkler Inc."
+              src={withBasePath('/logo.JPG')}
+              alt="Fox Construction Inc."
               width={180}
               height={54}
               className="h-15 w-auto"
@@ -97,12 +97,12 @@ export default function Header() {
               <Link
                 href="/"
                 onClick={handleLogoClick}
-                aria-label="Spring Rain — Home"
+                aria-label="Fox Construction — Home"
                 className="flex items-center shrink-0"
               >
                 <Image
-                  src={withBasePath('/logo_placeholder.png')}
-                  alt="Spring Rain Lawn Sprinkler Inc."
+                  src={withBasePath('/logo.JPG')}
+                  alt="Fox Construction Inc."
                   width={18}
                   height={50}
                   className="h-12 w-auto"
