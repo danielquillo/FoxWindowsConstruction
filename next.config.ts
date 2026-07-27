@@ -13,7 +13,7 @@
 import type { NextConfig } from "next";
 
 const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
-const repositoryName = "fox-windows-construction";
+const repositoryName = "FoxWindowsConstruction";
 const basePath = isGitHubPages ? `/${repositoryName}` : "";
 
 const nextConfig: NextConfig = {
