@@ -80,12 +80,11 @@ export default function HeroRotator() {
   return (
     <section
       className="
-        relative w-full
-        h-[calc(100svh-64px-60px)] 
-        md:h-[calc(100svh-64px)] 
-        min-h-[480px]
-        overflow-hidden
-      "
+      relative w-full
+      h-[calc(100dvh-72px)]
+      min-h-[480px]
+      overflow-hidden
+    "
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
