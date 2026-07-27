@@ -140,9 +140,9 @@ export default function Home() {
       <div
         id="home-hero"
         className="
-          top-[72px]
+          top-[88px]
           z-0
-          h-[calc(100dvh-72px)]
+          h-[calc(100dvh-88px)]
           min-h-[480px]
         "
       >
@@ -211,7 +211,7 @@ export default function Home() {
         <section
           id="homepage-content"
           className="
-            scroll-mt-[60px]
+            scroll-mt-[70px]
             mx-auto
             max-w-screen-xl
             px-4
