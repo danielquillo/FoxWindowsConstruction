@@ -140,9 +140,9 @@ export default function Home() {
       <div
         id="home-hero"
         className="
-          top-[72px]
+          top-[88px]
           z-0
-          h-[calc(100dvh-72px)]
+          h-[calc(100dvh-88px)]
           min-h-[480px]
         "
       >
@@ -211,7 +211,7 @@ export default function Home() {
         <section
           id="homepage-content"
           className="
-            scroll-mt-[60px]
+            scroll-mt-[70px]
             mx-auto
             max-w-screen-xl
             px-4
@@ -245,7 +245,7 @@ export default function Home() {
                   href="#quote"
                   className="inline-flex h-11 items-center justify-center rounded-full bg-blue-700 px-5 text-sm font-medium text-white shadow-sm hover:opacity-95"
                 >
-                  Request a Quote
+                  Contact Form
                 </a>
 
                 <Link
@@ -256,28 +256,12 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-
-            <div
-              id="quote"
-              className="scroll-mt-[88px] rounded-3xl border border-[--border] bg-[--bg] p-6 shadow-sm sm:p-8"
-            >
-              <h3 className="text-lg font-semibold">
-                Request a Consultation
-              </h3>
-
-              <p className="mt-1 text-sm text-[--nav-fg]/70">
-                Tell us about your window or door project, and our team will
-                follow up with you.
-              </p>
-
-              <QuoteForm />
-            </div>
           </div>
         </section>
 
         {/* Services */}
         <section className="mx-auto mt-10 max-w-screen-xl px-4 sm:mt-14 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between gap-4">
+          <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
             <div>
               <h2 className="text-2xl font-semibold tracking-tight">
                 Window &amp; Door Services
@@ -335,7 +319,7 @@ export default function Home() {
 
           {/* Popular services */}
           <div className="mt-10">
-            <div className="flex items-end justify-between gap-4">
+            <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
               <h3 className="text-xl font-semibold tracking-tight">
                 Popular Services
               </h3>
@@ -367,7 +351,7 @@ export default function Home() {
 
         {/* Recent work */}
         <section className="mx-auto mt-12 max-w-screen-xl px-4 sm:mt-16 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between gap-4">
+          <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
             <div>
               <h2 className="text-2xl font-semibold tracking-tight">
                 Recent Window &amp; Door Projects
@@ -382,7 +366,7 @@ export default function Home() {
 
             <Link
               href="/portfolio"
-              className="shrink-0 text-sm font-medium underline underline-offset-4"
+              className="text-sm font-medium underline underline-offset-4"
             >
               View full portfolio
             </Link>
@@ -496,7 +480,7 @@ export default function Home() {
         </section>
       </main>
 
-      <StickyQuoteButton />
+      {/* <StickyQuoteButton /> */}
     </div>
   );
 }

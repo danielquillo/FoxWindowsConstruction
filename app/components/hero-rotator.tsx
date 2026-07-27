@@ -10,7 +10,7 @@ export default function HeroRotator() {
     <section
       className="
         relative
-        h-[calc(100dvh-72px)]
+        h-[calc(100dvh-88px)]
         min-h-[480px]
         w-full
         overflow-hidden
