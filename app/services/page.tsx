@@ -12,13 +12,12 @@ export const metadata: Metadata = {
 };
 
 type ServiceSection = {
-  id: "window-installation" | "door-services" | "finishing-services";
+  id: "window-installation" | "door-services";
   title: string;
   subtitle: string;
   image: string;
   imagePosition?: string;
   popularRequests: string[];
-  includes: string[];
   projectNote?: string;
 };
 
@@ -27,22 +26,14 @@ const SECTIONS: ServiceSection[] = [
     id: "window-installation",
     title: "Window Installation & Replacement",
     subtitle:
-      "Custom-crafted, energy-efficient window installation for residential, multifamily, and commercial properties throughout Northbrook and Chicago’s North Shore.",
+      "Custom-crafted, energy-efficient window installation for residential, multifamily, and commercial properties throughout Northbrook and the Chicago Land.",
     image: "/window-installation.jpeg",
     imagePosition: "object-center",
     popularRequests: [
       "Residential window replacement",
-      "Energy-efficient window installation",
       "Condominium and townhome window projects",
       "Multifamily window replacement",
       "Commercial window installation",
-    ],
-    includes: [
-      "Careful removal of existing windows",
-      "Precise fitting and professional installation",
-      "Adjustment for proper operation",
-      "Attention to sealing and energy efficiency",
-      "Cleanup of the immediate work area",
     ],
     projectNote:
       "Fox Windows Construction has experience with projects ranging from individual residential replacements to large permitted multifamily installations involving hundreds of windows.",
@@ -51,49 +42,16 @@ const SECTIONS: ServiceSection[] = [
     id: "door-services",
     title: "Entry & Patio Door Services",
     subtitle:
-      "Professional installation and adjustment of entry doors, standard patio doors, and mechanical patio door systems for homes and commercial properties.",
+      "Professional installation of entry doors, patio doors, and steel commercial door installation.",
     image: "/entry-patio-services.jpeg",
     imagePosition: "object-center",
     popularRequests: [
       "Exterior entry door installation",
       "Patio door installation",
-      "Mechanical patio door adjustment",
-      "Sliding door replacement",
-      "Door fit and operation corrections",
-    ],
-    includes: [
-      "Removal of the existing door when required",
-      "Precise positioning and installation",
-      "Adjustment for smooth opening and closing",
-      "Attention to alignment, fit, and security",
-      "Preparation for final painting and trim work",
+      "Steel commercial door installation"
     ],
     projectNote:
       "Each door is installed with a precision-focused approach intended to support dependable operation, improved comfort, and lasting performance.",
-  },
-  {
-    id: "finishing-services",
-    title: "Painting & Finish Work",
-    subtitle:
-      "Post-installation painting and finishing services for windows, doors, custom trim, and surrounding surfaces.",
-    image: "/paint-finish-services.jpeg",
-    imagePosition: "object-center",
-    popularRequests: [
-      "Window painting",
-      "Entry door painting",
-      "Patio door painting",
-      "Custom trim painting",
-      "Post-installation touch-ups",
-    ],
-    includes: [
-      "Surface preparation",
-      "Painting of newly installed windows or doors",
-      "Custom trim finishing",
-      "Touch-ups around the installation area",
-      "A clean and polished final appearance",
-    ],
-    projectNote:
-      "Finishing services help provide a complete result by coordinating the appearance of newly installed windows, doors, and trim with the surrounding property.",
   },
 ];
 
@@ -155,7 +113,7 @@ function ServiceSectionCard({ service }: { service: ServiceSection }) {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-[var(--border)] bg-[var(--card)] p-4">
+            {/* <div className="rounded-2xl border border-[var(--border)] bg-[var(--card)] p-4">
               <p className="text-[13px] font-semibold text-neutral-900">
                 What&apos;s included
               </p>
@@ -171,7 +129,7 @@ function ServiceSectionCard({ service }: { service: ServiceSection }) {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
 
           {service.projectNote && (
