@@ -319,7 +319,7 @@ const SERVICES: ServiceSection[] = [
     headline: "Beautiful Windows. Professionally Installed.",
     introduction:
       "Fox Windows Construction installs replacement windows for single-family homes, townhomes, condominiums, multifamily properties, and commercial buildings. Every project is approached with careful fitting, dependable installation, and attention to long-term performance.",
-    heroImage: "/window-hero.png",
+    heroImage: "/window-hero2.png",
     heroImagePosition: "object-center",
     benefits: [
       {
@@ -393,11 +393,11 @@ const SERVICES: ServiceSection[] = [
   {
     id: "door-services",
     eyebrow: "Entry, Patio & Commercial Doors",
-    title: "Door Installation Services",
+    title: "Door Installation",
     headline: "Beautiful Doors. Reliable Installation.",
     introduction:
       "Fox Windows Construction provides installation services for exterior entry doors, patio doors, and select steel commercial door projects. Each installation is completed with attention to fit, security, operation, and the overall appearance of the property.",
-    heroImage: "/door-hero.png",
+    heroImage: "/door-hero2.png",
     heroImagePosition: "object-center",
     benefits: [
       {
@@ -513,7 +513,7 @@ function ServiceIcon({ type }: { type: Benefit["icon"] }) {
   };
 
   return (
-    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#062b4b] text-white">
+    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full">
       <svg
         viewBox="0 0 24 24"
         className="h-5 w-5"
@@ -540,11 +540,11 @@ function ServiceLandingSection({
   return (
     <section
       id={service.id}
-      className="scroll-mt-[104px] border-t border-[var(--border)] first:border-t-0"
+      className="scroll-mt-[104px]"
       aria-labelledby={`${service.id}-title`}
     >
       {/* Promotional hero */}
-      <div className="relative min-h-[560px] overflow-hidden sm:min-h-[620px] lg:min-h-[680px]">
+      <div className="relative min-h-[560px] overflow-hidden sm:min-h-[620px] lg:min-h-[680px]">  
         <Image
           src={withBasePath(service.heroImage)}
           alt={`${service.title} by Fox Windows Construction`}
@@ -553,11 +553,15 @@ function ServiceLandingSection({
           className={`object-cover ${service.heroImagePosition ?? "object-center"}`}
           priority={index === 0}
         />
+      
+        {/* Mobile: lighter fade, spans full width */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/10 lg:hidden" />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/10" />
+        {/* Desk top: stronger fade, holds to the middle */}
+        <div className="absolute inset-0 hidden lg:block bg-[linear-gradient(to_right,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.85)_25%,rgba(0,0,0,0.6)_40%,transparent_50%)]" />
+
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/10 lg:hidden" />
-
-        <div className="relative z-10 mx-auto flex min-h-[560px] max-w-screen-xl items-end px-4 py-10 sm:min-h-[620px] sm:px-6 sm:py-14 lg:min-h-[680px] lg:items-center lg:px-8">
+        <div className="relative z-10 mx-auto flex min-h-[560px] max-w-screen-xl items-end px-4 py-10 sm:min-h-[620px] sm:px-6 sm:py-14 lg:min-h-[680px] lg:items-center lg:px-8">    
           <div className="max-w-2xl text-white">
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-white/80">
               {service.eyebrow}
@@ -577,40 +581,23 @@ function ServiceLandingSection({
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/contact#quote"
-                className="inline-flex h-12 items-center justify-center rounded-xl bg-blue-700 px-6 text-[15px] font-medium text-white shadow-lg transition hover:bg-blue-800"
+                className="inline-flex h-12 items-center justify-center rounded-xl bg-[#0b3b63] 
+                px-6 text-[15px] font-medium text-white shadow-lg transition 
+                 hover:bg-[#184061] hover:brightness-110"
               >
                 Request a Quote
               </Link>
 
               <Link
                 href="/portfolio"
-                className="inline-flex h-12 items-center justify-center rounded-xl border border-white/60 bg-white/10 px-6 text-[15px] font-medium text-white backdrop-blur-sm transition hover:bg-white/20"
+                className="inline-flex h-12 items-center justify-center rounded-xl border 
+                border-white/60 bg-white/10 px-6 text-[15px] font-medium 
+                text-white backdrop-blur-sm transition hover:bg-white/20"
               >
                 View Our Work
               </Link>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Benefits */}
-      <div className="border-b border-[var(--border)] bg-white">
-        <div className="mx-auto grid max-w-screen-xl gap-6 px-4 py-8 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
-          {service.benefits.map((benefit) => (
-            <article key={benefit.title} className="flex gap-4">
-              <ServiceIcon type={benefit.icon} />
-
-              <div>
-                <h3 className="text-[15px] font-semibold text-neutral-900">
-                  {benefit.title}
-                </h3>
-
-                <p className="mt-1 text-[13px] leading-5 text-neutral-600">
-                  {benefit.description}
-                </p>
-              </div>
-            </article>
-          ))}
         </div>
       </div>
 
@@ -666,40 +653,31 @@ function ServiceLandingSection({
         </div>
       </div>
 
-      {/* Project experience */}
-      <div className="border-y border-[var(--border)] bg-[#062b4b] text-white">
-        <div className="mx-auto grid max-w-screen-xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8 lg:py-14">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-white/65">
-              Project experience
-            </p>
-
-            <h3 className="mt-3 text-[27px]/[1.1] font-semibold tracking-tight sm:text-[34px]/[1.05]">
-              {service.experienceTitle}
-            </h3>
-
-            <p className="mt-4 max-w-xl text-[15px] leading-7 text-white/75">
-              {service.experienceDescription}
-            </p>
-          </div>
-
-          <div className="grid gap-3 sm:grid-cols-2">
-            {service.experiencePoints.map((point) => (
-              <div
-                key={point}
-                className="flex gap-3 rounded-2xl border border-white/15 bg-white/5 p-4"
-              >
-                <div
-                  className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-white/30 text-xs"
-                  aria-hidden="true"
-                >
-                  ✓
+      {/* Benefits */}
+      <div className="border-b border-[#0b3b63] bg-[#062b4b]">
+        <div className="mx-auto grid max-w-screen-xl gap-6 px-4 py-10 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+          {service.benefits.map((benefit) => (
+            <article 
+              key={benefit.title} 
+              className="flex gap-4"
+            >
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#C89B3C]/15">
+                <div className="text-[#C89B3C]">
+                  <ServiceIcon type={benefit.icon} />
                 </div>
-
-                <p className="text-[14px] leading-6 text-white/85">{point}</p>
               </div>
-            ))}
-          </div>
+
+              <div>
+                <h3 className="text-[15px] font-semibold text-white">
+                  {benefit.title}
+                </h3>
+
+                <p className="mt-1 text-[13px] leading-5 text-white/75">
+                  {benefit.description}
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
@@ -713,11 +691,11 @@ export default function ServicesPage() {
       <section className="mx-auto max-w-screen-xl px-4 pb-8 pt-10 sm:px-6 sm:pt-12 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-sm font-medium text-neutral-600">
-            Serving Northbrook and the Chicago Area
+            Serving the Chicagoland
           </p>
 
           <h1 className="mt-2 text-[36px]/[1.05] font-semibold tracking-tight sm:text-[48px]/[1.02]">
-            Window &amp; Door Installation Services
+            Our Services
           </h1>
 
           <p className="mt-4 text-[15px] leading-7 text-neutral-600 sm:text-[17px]">
@@ -729,20 +707,33 @@ export default function ServicesPage() {
         </div>
 
         {/* Page navigation */}
-        <nav
-          aria-label="Services on this page"
-          className="mt-6 flex flex-wrap gap-2"
-        >
-          {SERVICES.map((service) => (
-            <a
-              key={service.id}
-              href={`#${service.id}`}
-              className="inline-flex h-10 items-center rounded-full border border-[var(--border)] bg-white px-4 text-[14px] font-medium text-neutral-900 transition hover:bg-neutral-50"
-            >
-              {service.title}
-            </a>
-          ))}
-        </nav>
+        <div className="mt-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-neutral-500">
+            Jump to a service
+          </p>
+          <nav aria-label="Services on this page" className="mt-3 flex flex-col gap-2 sm:flex-row sm:gap-3">
+            {SERVICES.map((service, i) => (
+              <a
+                key={service.id}
+                href={`#${service.id}`}
+                className="group flex items-center gap-3 rounded-2xl 
+                bg-[#0b3b63] px-4 py-3 text-[15px] font-medium text-white transition hover:border-neutral-300 
+                 hover:brightness-110 hover:bg-[#184061]"
+              >
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#C89B3C]/15 text-[13px] font-semibold text-[#C89B3C]">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="flex-1 ">{service.title}</span>
+                <span
+                  aria-hidden="true"
+                  className="text-white transition "
+                >
+                  ↓
+                </span>
+              </a>
+            ))}
+          </nav>
+        </div>
       </section>
 
       {/* Service landing sections */}
@@ -777,7 +768,9 @@ export default function ServicesPage() {
 
           <Link
             href="/contact#quote"
-            className="inline-flex h-12 shrink-0 items-center justify-center rounded-xl bg-blue-700 px-6 text-[15px] font-medium text-white transition hover:bg-blue-800"
+            className="inline-flex h-12 items-center justify-center rounded-xl bg-[#0b3b63] 
+                px-6 text-[15px] font-medium text-white shadow-lg transition 
+                 hover:bg-[#184061] hover:brightness-110"
           >
             Request a Quote
           </Link>
