@@ -83,14 +83,17 @@ export default function Header() {
               <div className="hidden md:flex items-center rounded-full border px-2 h-12 bg-white/95 shadow-[0_12px_35px_rgba(0,0,0,0.12)]" style={{ borderColor: 'var(--border)', backgroundColor: 'var(--nav-bg)', boxShadow: '0 8px 24px rgba(0,0,0,0.08)', }} >
                 <ul className="flex items-center gap-1">
                   {nav.map((item) => {
-                    const isActive = pathname === item.href;
+                    const isActive =
+                      item.href === "/"
+                        ? pathname === "/"
+                        : pathname.startsWith(item.href);
                     return (
                       <li key={item.href}>
                         <Link
                           href={item.href}
                           className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap transition-all duration-200 ${
                             isActive
-                              ? 'bg-blue-700 text-white shadow-sm'
+                              ? 'bg-black/5 text-black shadow-sm'
                               : 'text-[var(--nav-fg)] hover:bg-black/5'
                           }`}
                         >
@@ -101,7 +104,7 @@ export default function Header() {
                   })}
                 </ul>
                 <div className="mx-3 h-6 w-px" style={{ backgroundColor: 'var(--border)' }} />
-                <Link href="/contact#quote" className="inline-flex items-center rounded-full px-4 py-2 text-sm font-medium bg-blue-700 text-white hover:opacity-90 transition" >
+                <Link href="/contact#quote" className="inline-flex items-center rounded-full px-4 py-2 text-sm font-medium bg-[#0b3b63] text-white hover:opacity-90 transition" >
                   Contact Form
                 </Link>
               </div>
@@ -123,12 +126,15 @@ export default function Header() {
           <div className={`px-4 py-3 transition-all duration-300 ease-out ${ open ? 'translate-y-0 opacity-100 delay-100' : '-translate-y-2 opacity-0' }`} >
             <ul className="flex flex-col divide-y divide-[var(--border)]/50">
               {nav.map((item, i) => {
-                const isActive = pathname === item.href;
+                const isActive =
+                      item.href === "/"
+                        ? pathname === "/"
+                        : pathname.startsWith(item.href);
                 return (
                   <li key={item.href} className={`transition-all duration-300 ease-out ${ open ? 'translate-y-0 opacity-100' : '-translate-y-1 opacity-0' }`} style={{ transitionDelay: open ? `${80 + i * 40}ms` : '0ms' }} >
                     <Link href={item.href} onClick={() => setOpen(false)} className={`flex items-center py-3.5 px-3 -mx-3 text-[16px] rounded-xl transition-all duration-150 ease-out active:scale-[0.97] active:duration-75 ${
                       isActive
-                        ? 'text-blue-700 font-medium bg-blue-50'
+                        ? 'text-black font-medium bg-black/5'
                         : 'text-[var(--nav-fg)] active:bg-black/5'
                     }`} >
                       {item.label}
@@ -137,7 +143,7 @@ export default function Header() {
                 );
               })}
             </ul>
-            <Link href="/contact#quote" onClick={() => setOpen(false)} className="mt-3 inline-flex w-full items-center justify-center rounded-lg bg-blue-900 px-4 py-3 text-white font-medium active:scale-[0.98] transition-transform" >
+            <Link href="/contact#quote" onClick={() => setOpen(false)} className="mt-3 inline-flex w-full items-center justify-center rounded-lg bg-[#0b3b63] px-4 py-3 text-white font-medium active:scale-[0.98] transition-transform" >
               Contact Form
             </Link>
           </div>
