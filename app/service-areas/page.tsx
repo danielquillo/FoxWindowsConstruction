@@ -148,6 +148,7 @@ export default function ServiceAreasPage() {
             </div>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              {/* #0b3b63 */}
               <Link
                 href="/contact#quote"
                 className="inline-flex h-12 items-center justify-center rounded-xl bg-[#0b3b63] px-6 text-[15px] font-medium text-white shadow-lg transition hover:bg-[#184061] hover:brightness-110"
