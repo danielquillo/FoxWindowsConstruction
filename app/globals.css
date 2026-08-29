@@ -15,7 +15,14 @@ html {
   --nav-fg: #171717;
   --background: #ffffff;
   --foreground: #171717;
+  --button-blue-bg: #0b3b63;
+  --button-hover-bg: #184061;
+  --dark-blue-bg: #062b4b;
+  --gold-icon: #C89B3C;
 }
+/* var(--button-blue-bg)
+  var(--dark-blue-bg) 
+*/
 
 body {
   background: var(--bg);

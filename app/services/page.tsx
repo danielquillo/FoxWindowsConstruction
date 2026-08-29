@@ -311,9 +311,9 @@ function ServiceLandingSection({
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/contact#quote"
-                className="inline-flex h-12 items-center justify-center rounded-xl bg-[#0b3b63] 
+                className="inline-flex h-12 items-center justify-center rounded-xl bg-[var(--button-blue-bg)] 
                 px-6 text-[15px] font-medium text-white shadow-lg transition 
-                 hover:bg-[#184061] hover:brightness-110"
+                 hover:bg-[var(--button-hover-bg)] hover:brightness-110"
               >
                 Request a Quote
               </Link>
@@ -384,15 +384,15 @@ function ServiceLandingSection({
       </div>
 
       {/* Benefits */}
-      <div className="border-b border-[#0b3b63] bg-[#062b4b]">
+      <div className="border-b border-[var(--button-blue-bg)] bg-[var(--dark-blue-bg)]">
         <div className="mx-auto grid max-w-screen-xl gap-6 px-4 py-10 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
           {service.benefits.map((benefit) => (
             <article 
               key={benefit.title} 
               className="flex gap-4"
             >
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#C89B3C]/15">
-                <div className="text-[#C89B3C]">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--gold-icon)]/15">
+                <div className="text-[var(--gold-icon)]">
                   <ServiceIcon type={benefit.icon} />
                 </div>
               </div>
@@ -447,10 +447,10 @@ export default function ServicesPage() {
                 key={service.id}
                 href={`#${service.id}`}
                 className="group flex items-center gap-3 rounded-2xl 
-                bg-[#0b3b63] px-4 py-3 text-[15px] font-medium text-white transition hover:border-neutral-300 
-                 hover:brightness-110 hover:bg-[#184061]"
+                bg-[var(--button-blue-bg)] px-4 py-3 text-[15px] font-medium text-white transition hover:border-neutral-300 
+                 hover:brightness-110 hover:bg-[var(--button-hover-bg)]"
               >
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#C89B3C]/15 text-[13px] font-semibold text-[#C89B3C]">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--gold-icon)]/15 text-[13px] font-semibold text-[var(--gold-icon)]">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="flex-1 ">{service.title}</span>
@@ -498,9 +498,9 @@ export default function ServicesPage() {
 
           <Link
             href="/contact#quote"
-            className="inline-flex h-12 items-center justify-center rounded-xl bg-[#0b3b63] 
+            className="inline-flex h-12 items-center justify-center rounded-xl bg-[var(--button-blue-bg)] 
                 px-6 text-[15px] font-medium text-white shadow-lg transition 
-                 hover:bg-[#184061] hover:brightness-110"
+                 hover:bg-[var(--button-hover-bg)] hover:brightness-110"
           >
             Request a Quote
           </Link>
