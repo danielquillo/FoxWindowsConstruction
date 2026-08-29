@@ -110,7 +110,7 @@ export default function ServiceAreasPage() {
       <section className="mx-auto max-w-screen-xl px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8">
         <div className="grid overflow-hidden rounded-3xl border border-[var(--border)] bg-white shadow-sm lg:grid-cols-12">
           {/* Map */}
-          <div className="relative z-0 min-h-[350px] overflow-hidden lg:col-span-7 lg:min-h-[520px]">
+          <div className="relative z-0 h-[400px] overflow-hidden lg:col-span-7 lg:h-[520px]">
             <ServiceAreaMap />
           </div>
 
