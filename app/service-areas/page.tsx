@@ -126,7 +126,7 @@ export default function ServiceAreasPage() {
               homeowners, property managers, condominium associations, builders,
               and commercial clients throughout the surrounding area.
             </p>
-
+            {/* bg-white */}
             <div className="mt-7 rounded-2xl border border-white/15 bg-white/5 p-5">
               <div className="flex items-start gap-3">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#C89B3C]/15 text-[#C89B3C]">
@@ -134,10 +134,12 @@ export default function ServiceAreasPage() {
                 </div>
 
                 <div>
+                  {/* text-white */}
                   <p className="text-sm font-semibold text-white">
                     Fox Windows Construction
                   </p>
-
+                  
+                  {/* text-white/70 */}
                   <p className="mt-1 text-sm leading-6 text-white/70">
                     1986 Raymond Dr
                     <br />
