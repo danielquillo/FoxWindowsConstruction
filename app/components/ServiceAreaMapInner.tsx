@@ -31,7 +31,7 @@ export default function ServiceAreaMapInner() {
       center={CENTER}
       zoom={8.2}
       scrollWheelZoom={false}
-      className="h-[400px] w-full md:h-[500px] lg:h-full lg:min-h-[520px]"
+      className="h-full w-full"
     >
       <TileLayer
         attribution='&copy; OpenStreetMap contributors'
