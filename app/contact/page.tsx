@@ -87,16 +87,14 @@ export default function ContactPage() {
     <div className="bg-[--bg] text-[--fg]">
       {/* ==================== INTRO ==================== */}
       <section className="mx-auto max-w-screen-xl px-4 pb-10 pt-10 sm:px-6 sm:pb-12 sm:pt-12 lg:px-8">
-        <div className="max-w-5xl">
-          <p className="text-sm font-medium text-neutral-600">
+        <div>
+          <p className="max-w-3xl text-sm font-medium text-neutral-600">
             Start Your Project
           </p>
-
-          <h1 className="mt-2 text-[36px]/[1.05] font-semibold tracking-tight sm:text-[48px]/[1.02] lg:whitespace-nowrap">
+          <h1 className="max-w-3xl mt-2 text-[36px]/[1.05] font-semibold tracking-tight sm:text-[48px]/[1.02] lg:whitespace-nowrap">
             Contact Fox Windows Construction
           </h1>
-
-          <p className="mt-4 max-w-3xl text-[15px] leading-7 text-neutral-600 sm:text-[17px]">
+          <p className="max-w-3xl mt-4 text-[15px] leading-7 text-neutral-600 sm:text-[17px]">
             Tell us about your window or door project and our team will follow
             up to discuss your needs, project location, and next steps.
             Responses are typically provided within 1–2 business days.
