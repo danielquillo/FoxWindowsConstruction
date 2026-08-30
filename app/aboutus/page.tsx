@@ -151,7 +151,7 @@ export default function AboutPage() {
             {EXPERIENCE.map((item) => (
               <div
                 key={item.label}
-                className="rounded-2xl border border-[var(--border)] bg-white p-5"
+                className="items-center rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-5 shadow-sm transition duration-200"
               >
                 <p className="text-[22px] font-semibold tracking-tight text-neutral-900 md:text-[26px]">
                   {item.value}
@@ -169,7 +169,7 @@ export default function AboutPage() {
       {/* Bottom CTA */}
       <section className="border-t border-[var(--border)] bg-white">
         <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="flex flex-col gap-5 rounded-3xl bg-[#062b4b] p-6 text-white sm:flex-row sm:items-center sm:justify-between sm:p-8">
+          <div className="flex flex-col gap-5 rounded-3xl bg-[#062b4b] p-6 text-white shadow-sm transition duration-200 sm:flex-row sm:items-center sm:justify-between sm:p-8">
             <div>
               <p className="text-sm font-medium text-[#C89B3C]">
                 Ready to Improve Your Property?
