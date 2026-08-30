@@ -221,16 +221,14 @@ export default function PortfolioPage() {
     <div className="bg-[--bg] text-[--fg]">
       {/* ==================== INTRO ==================== */}
       <section className="mx-auto max-w-screen-xl px-4 pb-10 pt-10 sm:px-6 sm:pb-12 sm:pt-12 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="text-sm font-medium text-neutral-600">
+        <div>
+          <p className="max-w-3xl text-sm font-medium text-neutral-600">
             Residential, Multifamily &amp; Commercial Projects
           </p>
-
-          <h1 className="mt-2 text-[36px]/[1.05] font-semibold tracking-tight sm:text-[48px]/[1.02]">
+          <h1 className="max-w-3xl mt-2 text-[36px]/[1.05] font-semibold tracking-tight sm:text-[48px]/[1.02] lg:whitespace-nowrap">
             Our Work
           </h1>
-
-          <p className="mt-4 max-w-2xl text-[15px] leading-7 text-neutral-600 sm:text-[17px]">
+          <p className="max-w-3xl mt-4 text-[15px] leading-7 text-neutral-600 sm:text-[17px]">
             Explore completed window and door installation projects by Fox
             Windows Construction. Our experience includes residential,
             condominium, multifamily, and select commercial properties
@@ -341,19 +339,19 @@ export default function PortfolioPage() {
       </section>
 
       {/* ==================== EXPERIENCE ==================== */}
-      <section className="bg-[#062b4b] text-white">
+      <section className="border-y border-[var(--border)] bg-white">
         <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#C89B3C]">
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-neutral-500">
                 Project Experience
               </p>
 
-              <h2 className="mt-2 text-[28px]/[1.1] font-semibold tracking-tight sm:text-[36px]/[1.05]">
+              <h2 className="mt-2 text-[27px]/[1.1] font-semibold tracking-tight sm:text-[34px]/[1.05]">
                 Experience Across Different Property Types
               </h2>
 
-              <p className="mt-4 max-w-xl text-[15px] leading-7 text-white/70">
+              <p className="mt-3 max-w-xl text-[14px] leading-6 text-neutral-600">
                 Our work ranges from individual residential replacements to
                 larger coordinated multifamily and select commercial
                 installations.
@@ -364,17 +362,17 @@ export default function PortfolioPage() {
               {EXPERIENCE.map((item) => (
                 <article
                   key={item.title}
-                  className="rounded-2xl border border-white/15 bg-white/5 p-5"
+                  className="items-center rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-5 shadow-sm transition duration-200"
                 >
                   <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#C89B3C]/15 text-[#C89B3C]">
                     <ProjectIcon type={item.icon} />
                   </div>
 
-                  <h3 className="mt-4 text-[16px] font-semibold text-white">
+                  <h3 className="mt-4 text-[16px] font-semibold text-neutral-900">
                     {item.title}
                   </h3>
 
-                  <p className="mt-2 text-[13px] leading-6 text-white/70">
+                  <p className="mt-1 text-[13px] leading-5 text-neutral-600">
                     {item.description}
                   </p>
                 </article>
