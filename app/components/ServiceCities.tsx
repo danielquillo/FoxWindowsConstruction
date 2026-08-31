@@ -33,22 +33,26 @@ export default function ServiceCities({
 
   return (
     <>
+      
+      {/* 
+
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#C89B3C]/15 text-[#C89B3C]"> */}
       <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {visibleCities.map((city) => (
           <div
             key={city}
-            className="group flex items-center gap-4 rounded-2xl border border-[var(--border)] bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md"
+            className="group flex items-center gap-4 rounded-2xl border border-white/15 bg-white/5 p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md"
           >
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#C89B3C]/15 text-[#C89B3C]">
               <LocationIcon />
             </div>
 
             <div>
-              <h3 className="text-[16px] font-semibold text-neutral-900">
+              <h3 className="text-[16px] font-semibold text-white">
                 {city}
               </h3>
-
-              <p className="mt-1 text-[13px] leading-5 text-neutral-600">
+              
+              <p className="mt-1 text-[13px] leading-5 text-white/70">
                 Window &amp; door installation
               </p>
             </div>
