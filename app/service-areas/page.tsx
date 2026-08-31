@@ -89,16 +89,14 @@ export default function ServiceAreasPage() {
     <div className="bg-[--bg] text-[--fg]">
       {/* ==================== INTRO ==================== */}
       <section className="mx-auto max-w-screen-xl px-4 pb-10 pt-10 sm:px-6 sm:pb-12 sm:pt-12 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="text-sm font-medium text-neutral-600">
+        <div>
+          <p className="max-w-3xl text-sm font-medium text-neutral-600">
             Based in Northbrook, Illinois
           </p>
-
-          <h1 className="mt-2 text-[36px]/[1.05] font-semibold tracking-tight sm:text-[48px]/[1.02]">
+          <h1 className="max-w-3xl mt-2 text-[36px]/[1.05] font-semibold tracking-tight sm:text-[48px]/[1.02] lg:whitespace-nowrap">
             Service Areas
           </h1>
-
-          <p className="mt-4 max-w-2xl text-[15px] leading-7 text-neutral-600 sm:text-[17px]">
+          <p className="max-w-3xl mt-4 text-[15px] leading-7 text-neutral-600 sm:text-[17px]">
             Fox Windows Construction provides professional window and door
             installation throughout Northbrook, Chicago&apos;s North Shore, and
             surrounding Chicagoland communities.
@@ -170,24 +168,26 @@ export default function ServiceAreasPage() {
       </section>
 
       {/* ==================== COMMUNITIES ==================== */}
-      <section className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-neutral-500">
-            Local Service
-          </p>
+      <section className="bg-[#062b4b] text-white">
+          <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#C89B3C]">
+              Local Service
+            </p>
 
-          <h2 className="mt-2 text-[28px]/[1.1] font-semibold tracking-tight sm:text-[36px]/[1.05]">
-            Communities We Commonly Serve
-          </h2>
+            <h2 className="mt-2 text-[28px]/[1.1] font-semibold tracking-tight sm:text-[36px]/[1.05]">
+              Communities We Commonly Serve
+            </h2>
 
-          <p className="mt-3 text-[15px] leading-7 text-neutral-600">
-            We regularly complete window and door installation projects
-            throughout Northbrook and surrounding communities. If your city
-            isn&apos;t listed, contact us to confirm availability.
-          </p>
+            <p className="mt-4 text-[15px] leading-7 text-white/70">
+              We regularly complete window and door installation projects
+              throughout Northbrook and surrounding communities. If your city
+              isn&apos;t listed, contact us to confirm availability.
+            </p>
+          </div>
+          
+          <ServiceCities cities={CITIES} />
         </div>
-
-        <ServiceCities cities={CITIES} />
       </section>
 
       {/* ==================== PROPERTY TYPES ==================== */}
@@ -251,7 +251,7 @@ export default function ServiceAreasPage() {
 
             <Link
               href="/contact#quote"
-              className="inline-flex h-12 shrink-0 items-center justify-center rounded-xl bg-[#0b3b63] px-6 text-[15px] font-medium text-white shadow-lg transition hover:bg-[#184061] hover:brightness-110"
+              className="inline-flex h-12 items-center justify-center rounded-xl bg-[#0b3b63] px-6 text-[15px] font-medium text-white shadow-lg transition hover:bg-[#184061] hover:brightness-110"
             >
               Contact Us
             </Link>
