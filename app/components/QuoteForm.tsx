@@ -72,13 +72,13 @@ export default function QuoteForm({ className = "" }: { className?: string }) {
             What do you need help with?
           </option>
           <option value="Service 1">
-            Service 1
+            Window Installation & Replacement
           </option>
           <option value="Service 2">
-            Service 2
+            Door Installation
           </option>
           <option value="Service 3">
-            Service 3
+            Something Else
           </option>
         </select>
       </div>
@@ -86,7 +86,10 @@ export default function QuoteForm({ className = "" }: { className?: string }) {
       <textarea name="message" rows={5} placeholder="Briefly describe what you need…" className="rounded-xl border border-neutral-300 bg-white px-3 py-3 text-[16px] outline-none focus:ring-2 focus:ring-neutral-800" 
       />
 
-      <button type="submit" disabled={status === "sending"} className="h-12 mt-auto flex items-center justify-center rounded-xl bg-neutral-900 text-white text-[16px] font-medium hover:opacity-95 active:opacity-90 disabled:opacity-60">
+      <button type="submit" disabled={status === "sending"} 
+        className="h-12 mt-auto flex items-center justify-center rounded-xl 
+        bg-[#0b3b63] text-white text-[16px] font-medium shadow-lg transition 
+        hover:bg-[#184061] hover:brightness-110 active:opacity-90 disabled:opacity-60">
         {status === "sending" ? "Sending..." : "Send request"}
       </button>
       
