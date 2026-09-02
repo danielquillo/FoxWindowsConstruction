@@ -11,13 +11,12 @@ const SITE_URL = "https://YOUR-DOMAIN.com";
 
 const IMAGES = {
   hero: "/new_hero.png",
-
+  
   windowService: "/window-hero2.png",
   doorService: "/door-hero2.png",
-
   projectFeatured: "/window-installation.jpeg",
-  projectSecond: "/window-hero2.png",
-  projectThird: "/gallery-5.jpeg",
+  projectSecond: "/painting-finish-work.JPG",
+  projectThird: "/window5.jpeg",
 };
 
 /* =========================================================
@@ -27,6 +26,8 @@ const IMAGES = {
 const LINKS = {
   quote: "/contact#quote",
   services: "/services",
+  window_services: "/services#window-installation",
+  door_services: "/services#door-services",
   portfolio: "/portfolio",
   serviceAreas: "/service-areas",
   reviews: "/reviews",
@@ -53,14 +54,14 @@ const services = [
     description:
       "Professional replacement window installation for single-family homes, condominiums, multifamily properties, and select commercial projects.",
     image: IMAGES.windowService,
-    href: LINKS.services,
+    href: LINKS.window_services,
   },
   {
     title: "Door Installation",
     description:
       "Entry doors, sliding patio doors, hinged patio doors, and select steel commercial door installation.",
     image: IMAGES.doorService,
-    href: LINKS.services,
+    href: LINKS.door_services,
   },
 ];
 
