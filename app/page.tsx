@@ -11,13 +11,12 @@ const SITE_URL = "https://YOUR-DOMAIN.com";
 
 const IMAGES = {
   hero: "/new_hero.png",
-
+  
   windowService: "/window-hero2.png",
   doorService: "/door-hero2.png",
-
   projectFeatured: "/window-installation.jpeg",
-  projectSecond: "/window-hero2.png",
-  projectThird: "/gallery-5.jpeg",
+  projectSecond: "/painting-finish-work.JPG",
+  projectThird: "/window5.jpeg",
 };
 
 /* =========================================================
@@ -27,9 +26,11 @@ const IMAGES = {
 const LINKS = {
   quote: "/contact#quote",
   services: "/services",
+  window_services: "/services#window-installation",
+  door_services: "/services#door-services",
   portfolio: "/portfolio",
   serviceAreas: "/service-areas",
-  reviews: "/reviews",
+  reviews: "https://www.google.com/search?q=fox+windows+construction&oq=&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBwgCEAAYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgxOTcxajBqNKgCALACAA&sourceid=chrome&source=chrome.ob&ie=UTF-8#lrd=0x880fc74247c9ca6b:0xb4c54199dfb521ba,1,,,,",
 };
 
 /* =========================================================
@@ -53,14 +54,14 @@ const services = [
     description:
       "Professional replacement window installation for single-family homes, condominiums, multifamily properties, and select commercial projects.",
     image: IMAGES.windowService,
-    href: LINKS.services,
+    href: LINKS.window_services,
   },
   {
     title: "Door Installation",
     description:
       "Entry doors, sliding patio doors, hinged patio doors, and select steel commercial door installation.",
     image: IMAGES.doorService,
-    href: LINKS.services,
+    href: LINKS.door_services,
   },
 ];
 
@@ -233,7 +234,7 @@ export default function Home() {
           HERO
           ===================================================== */}
 
-      <section className="relative min-h-[600px] overflow-hidden sm:min-h-[650px] lg:min-h-[740px]">
+      <section className="relative min-h-[650px] overflow-hidden sm:min-h-[700px] lg:min-h-[740px]">
         <Image
           src={withBasePath(IMAGES.hero)}
           alt="Fox Windows Construction window and door installation"
@@ -251,8 +252,8 @@ export default function Home() {
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/5" />
 
-        <div className="relative z-10 mx-auto flex min-h-[600px] max-w-screen-xl items-end px-4 pb-10 pt-24 sm:min-h-[650px] sm:px-6 sm:pb-14 lg:min-h-[700px] lg:items-center lg:px-8 lg:py-16">
-          <div className="max-w-2xl text-white">
+        <div className="relative z-10 mx-auto flex min-h-[700px] max-w-screen-xl items-start px-4 pb-44 pt-24 sm:min-h-[650px] sm:px-6 sm:pb-44 lg:min-h-[700px] lg:items-center lg:px-8 lg:py-16">          
+          <div className="w-full max-w-2xl text-white">
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-white/80">
               Window &amp; Door Installation • Northbrook, Illinois
             </p>
@@ -267,7 +268,7 @@ export default function Home() {
               Chicagoland.
             </p>
 
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <div className="absolute inset-x-4 bottom-8 flex flex-col gap-3 sm:inset-x-6 lg:static lg:mt-7 lg:flex-row">
               <Link
                 href={LINKS.quote}
                 className="inline-flex h-12 items-center justify-center rounded-xl bg-[var(--button-blue-bg)] px-6 text-[15px] font-medium text-white shadow-lg transition hover:bg-[var(--button-hover-bg)] hover:brightness-110"
@@ -282,15 +283,6 @@ export default function Home() {
                 View Our Work
               </Link>
             </div>
-
-            {/* Trust row */}
-            {/* <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2 border-t border-white/25 pt-5 text-[13px] font-medium text-white/80">
-              <span>Based in Northbrook</span>
-              <span className="hidden sm:inline">•</span>
-              <span>Residential &amp; Multifamily</span>
-              <span className="hidden sm:inline">•</span>
-              <span>Window &amp; Door Installation</span>
-            </div> */}
           </div>
         </div>
       </section>
@@ -299,7 +291,7 @@ export default function Home() {
           LOCAL INTRO
           ===================================================== */}
 
-      <section className="bg-white">
+      <section className="hidden  bg-white">
         <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
@@ -479,7 +471,7 @@ export default function Home() {
             </Link>
 
             {/* Smaller projects */}
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="hidden gap-4 lg:grid lg:grid-cols-1">
               <Link
                 href={LINKS.portfolio}
                 className="group relative min-h-[250px] overflow-hidden rounded-3xl"
@@ -571,6 +563,8 @@ export default function Home() {
           <div className="mt-7 flex justify-center">
             <Link
               href={LINKS.reviews}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[14px] font-semibold text-[var(--button-blue-bg)]"
             >
               Read Our Reviews on Google →
@@ -648,7 +642,7 @@ export default function Home() {
                 href={LINKS.serviceAreas}
                 className="mt-5 inline-flex text-[14px] font-semibold text-[var(--button-blue-bg)]"
               >
-                Explore Our Service Area →
+                Explore Our Service Areas →
               </Link>
             </div>
 
