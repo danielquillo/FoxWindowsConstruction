@@ -163,28 +163,28 @@ const SERVICES: ServiceSection[] = [
         title: "Entry Doors",
         description:
           "Exterior entry door installation designed to support security, appearance, and dependable daily use.",
-        image: "/entry-door.png",
+        image: "/new_entry-door.png",
         imagePosition: "object-center",
       },
       {
         title: "Sliding Patio Doors",
         description:
           "Patio door installation for smooth operation, natural light, and convenient outdoor access.",
-        image: "/sliding-patio-door.png",
+        image: "/new_sliding-patio.png",
         imagePosition: "object-center",
       },
       {
         title: "Hinged Patio Doors",
         description:
           "Traditional hinged patio door installations for homes and residential properties.",
-        image: "/hinged-patio-door.png",
+        image: "/new_hinged_patio.png",
         imagePosition: "object-center",
       },
       {
         title: "Steel Commercial Doors",
         description:
           "Select steel door installation for churches, offices, community buildings, and similar commercial properties.",
-        image: "/commercial-door.png",
+        image: "/new_steel-door.png",
         imagePosition: "object-center",
       },
     ],
@@ -419,7 +419,7 @@ export default function ServicesPage() {
     <div className="bg-[--bg] text-[--fg]">
       {/* Page introduction */}
       <section className="mx-auto max-w-screen-xl px-4 pb-8 pt-10 sm:px-6 sm:pt-12 lg:px-8">
-        <div className="max-w-3xl">
+        <div className="max-w-5xl">
           <p className="text-sm font-medium text-neutral-600">
             Serving the Chicagoland
           </p>
@@ -428,7 +428,7 @@ export default function ServicesPage() {
             Our Services
           </h1>
 
-          <p className="mt-4 text-[15px] leading-7 text-neutral-600 sm:text-[17px]">
+          <p className="mt-4 max-w-3xl text-[15px] leading-7 text-neutral-600 sm:text-[17px]">
             Fox Windows Construction provides professional window replacement,
             entry door installation, patio door installation, and select steel
             commercial door services for residential, multifamily, and
