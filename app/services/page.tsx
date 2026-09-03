@@ -163,28 +163,28 @@ const SERVICES: ServiceSection[] = [
         title: "Entry Doors",
         description:
           "Exterior entry door installation designed to support security, appearance, and dependable daily use.",
-        image: "/entry-door.png",
+        image: "/new_entry-door.png",
         imagePosition: "object-center",
       },
       {
         title: "Sliding Patio Doors",
         description:
           "Patio door installation for smooth operation, natural light, and convenient outdoor access.",
-        image: "/sliding-patio-door.png",
+        image: "/new_sliding-patio.png",
         imagePosition: "object-center",
       },
       {
         title: "Hinged Patio Doors",
         description:
           "Traditional hinged patio door installations for homes and residential properties.",
-        image: "/hinged-patio-door.png",
+        image: "/new_hinged_patio.png",
         imagePosition: "object-center",
       },
       {
         title: "Steel Commercial Doors",
         description:
           "Select steel door installation for churches, offices, community buildings, and similar commercial properties.",
-        image: "/commercial-door.png",
+        image: "/new_steel-door.png",
         imagePosition: "object-center",
       },
     ],
