@@ -412,11 +412,11 @@ export default function Home() {
           RECENT PROJECTS
           ===================================================== */}
 
-      <section className="bg-white">
-        <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      <section className="bg-[#062b4b] text-white">
+        <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-neutral-500">
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#C89B3C]">
                 Recent Projects
               </p>
 
@@ -424,7 +424,7 @@ export default function Home() {
                 See Our Work
               </h2>
 
-              <p className="mt-3 max-w-2xl text-[15px] leading-7 text-neutral-600">
+              <p className="mt-4 max-w-xl text-[15px] leading-7 text-white/70">
                 Explore completed window and door installation projects from
                 homes, condominium communities, multifamily properties, and
                 select commercial work.
@@ -433,7 +433,7 @@ export default function Home() {
 
             <Link
               href={LINKS.portfolio}
-              className="shrink-0 text-[14px] font-semibold text-[var(--button-blue-bg)]"
+              className="shrink-0 text-[14px] font-semibold text-[var(--gold-icon)]"
             >
               View Full Portfolio →
             </Link>
