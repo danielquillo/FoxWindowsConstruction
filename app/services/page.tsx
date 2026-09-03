@@ -311,7 +311,7 @@ function ServiceLandingSection({
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/contact#quote"
-                className="inline-flex h-12 items-center justify-center rounded-xl bg-[var(--button-blue-bg)] 
+                className="inline-flex h-12 items-center justify-center rounded-xl bg-[var(--client-blue)] 
                 px-6 text-[15px] font-medium text-white shadow-lg transition 
                  hover:bg-[var(--button-hover-bg)] hover:brightness-110"
               >
@@ -384,7 +384,7 @@ function ServiceLandingSection({
       </div>
 
       {/* Benefits */}
-      <div className="border-b border-[var(--button-blue-bg)] bg-[var(--dark-blue-bg)]">
+      <div className="border-b border-[var(--button-blue-bg)] bg-[var(--client-blue)]">
         <div className="mx-auto grid max-w-screen-xl gap-6 px-4 py-10 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
           {service.benefits.map((benefit) => (
             <article 
@@ -447,7 +447,7 @@ export default function ServicesPage() {
                 key={service.id}
                 href={`#${service.id}`}
                 className="group flex items-center gap-3 rounded-2xl 
-                bg-[var(--button-blue-bg)] px-4 py-3 text-[15px] font-medium text-white transition hover:border-neutral-300 
+                bg-[var(--client-blue)] px-4 py-3 text-[15px] font-medium text-white transition hover:border-neutral-300 
                  hover:brightness-110 hover:bg-[var(--button-hover-bg)]"
               >
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--gold-icon)]/15 text-[13px] font-semibold text-[var(--gold-icon)]">
@@ -498,7 +498,7 @@ export default function ServicesPage() {
 
           <Link
             href="/contact#quote"
-            className="inline-flex h-12 items-center justify-center rounded-xl bg-[var(--button-blue-bg)] 
+            className="inline-flex h-12 items-center justify-center rounded-xl bg-[var(--client-blue)] 
                 px-6 text-[15px] font-medium text-white shadow-lg transition 
                  hover:bg-[var(--button-hover-bg)] hover:brightness-110"
           >

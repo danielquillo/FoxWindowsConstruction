@@ -19,6 +19,7 @@ html {
   --button-hover-bg: #184061;
   --dark-blue-bg: #062b4b;
   --gold-icon: #C89B3C;
+  --client-blue: #16168F;
 }
 /* Gold icon background color with 15% opacity: bg-[var(--gold-icon)]/15 */
 
