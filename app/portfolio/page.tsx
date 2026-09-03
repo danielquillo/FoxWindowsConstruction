@@ -13,7 +13,6 @@ type PrimaryFilter =
   | "all"
   | "windows"
   | "doors"
-  | "multifamily-condos"
   | "videos";
 
 type WindowFilter =
@@ -21,27 +20,24 @@ type WindowFilter =
   | "residential"
   | "townhome-condo"
   | "multifamily"
-  | "commercial";
 
 type DoorFilter =
   | "all"
   | "entry"
   | "sliding-patio"
   | "hinged-patio"
-  | "steel-commercial";
+  | "steel-door";
 
 type MediaTag =
   | "windows"
   | "doors"
-  | "multifamily-condos"
   | "window-residential"
   | "window-townhome-condo"
   | "window-multifamily"
-  | "window-commercial"
   | "door-entry"
   | "door-sliding-patio"
   | "door-hinged-patio"
-  | "door-steel-commercial";
+  | "door-steel-door";
 
 type PortfolioItem = {
   id: string;
@@ -64,112 +60,248 @@ type PortfolioItem = {
    Example:
    A condo window project can be both:
    "windows"
-   "multifamily-condos"
    "window-townhome-condo"
    ========================================================= */
 
 const PORTFOLIO_ITEMS: PortfolioItem[] = [
-  /* ===================== WINDOWS ===================== */
+  /* ===================== Residential Windows ===================== */
 
   {
     id: "window-1",
-    src: "/placeholder-window-1.jpg",
+    src: "/res-window-1.jpeg",
     alt: "Residential window installation by Fox Windows Construction",
     label: "Residential Windows",
     mediaType: "image",
-    tags: ["windows", "window-residential"],
+    tags: [
+      "windows", 
+      "window-residential"
+    ],
     position: "object-center",
   },
   {
     id: "window-2",
-    src: "/placeholder-window-2.jpg",
+    src: "/res-window-2.jpeg",
     alt: "Residential replacement window project",
     label: "Residential Windows",
     mediaType: "image",
-    tags: ["windows", "window-residential"],
+    tags: [
+      "windows", 
+      "window-residential"
+    ],
     position: "object-center",
   },
   {
     id: "window-3",
-    src: "/placeholder-window-3.jpg",
+    src: "/res-window-3.jpg",
     alt: "Townhome window replacement project",
-    label: "Townhome Windows",
+    label: "Residential Windows",
     mediaType: "image",
     tags: [
       "windows",
-      "multifamily-condos",
-      "window-townhome-condo",
+      "window-residential"
     ],
     position: "object-center",
   },
   {
     id: "window-4",
-    src: "/placeholder-window-4.jpg",
+    src: "/res-window-4.jpeg",
     alt: "Condominium window installation project",
-    label: "Condominium Windows",
+    label: "Residential Windows",
     mediaType: "image",
     tags: [
       "windows",
-      "multifamily-condos",
-      "window-townhome-condo",
+      "window-residential"
     ],
     position: "object-center",
   },
   {
     id: "window-5",
-    src: "/placeholder-window-5.jpg",
+    src: "/res-window-5.jpeg",
     alt: "Multifamily window replacement project",
-    label: "Multifamily Windows",
+    label: "Residential Windows",
     mediaType: "image",
-    tags: ["windows", "multifamily-condos", "window-multifamily"],
+    tags: [
+      "windows",
+      "window-residential"
+    ],
     position: "object-center",
   },
   {
     id: "window-6",
-    src: "/placeholder-window-6.jpg",
+    src: "/res-window-6.jpeg",
     alt: "Large multifamily window installation",
-    label: "Multifamily Windows",
+    label: "Residential Windows",
     mediaType: "image",
-    tags: ["windows", "multifamily-condos", "window-multifamily"],
+    tags: [
+      "windows",
+      "window-residential"
+    ],
     position: "object-center",
   },
   {
     id: "window-7",
-    src: "/placeholder-window-7.jpg",
+    src: "/res-window-7.jpg",
     alt: "Commercial window installation project",
-    label: "Commercial Windows",
+    label: "Residential Windows",
     mediaType: "image",
-    tags: ["windows", "window-commercial"],
+    tags: [
+      "windows",
+      "window-residential"
+    ],
     position: "object-center",
   },
   {
     id: "window-8",
-    src: "/placeholder-window-8.jpg",
+    src: "/res-window-8.jpeg",
     alt: "Completed replacement window installation",
     label: "Residential Windows",
     mediaType: "image",
-    tags: ["windows", "window-residential"],
+    tags: [
+      "windows",
+      "window-residential"
+    ],
+    position: "object-center",
+  },
+
+  /* ===================== Townhomes/Condo Windows ===================== */
+  {
+    id: "town-window-1",
+    src: "/town-window-1.jpeg",
+    alt: "Window installation for a townhome property",
+    label: "Townhome Windows",
+    mediaType: "image",
+    tags: [
+      "windows",
+      "window-townhome-condo"
+    ],
+    position: "object-center",
+  },
+  {
+    id: "town-window-2",
+    src: "/town-window-2.jpeg",
+    alt: "Window installation for a townhome property",
+    label: "Townhome Windows",
+    mediaType: "image",
+    tags: [
+      "windows",
+      "window-townhome-condo"
+    ],
+    position: "object-center",
+  },
+  {
+    id: "town-window-3",
+    src: "/town-window-3.jpeg",
+    alt: "Window installation for a townhome property",
+    label: "Townhome Windows",
+    mediaType: "image",
+    tags: [
+      "windows",
+      "window-townhome-condo"
+    ],
+    position: "object-center",
+  },
+
+  /* ===================== MULTIFAMILY Windows ===================== */
+
+  {
+    id: "multi-window-1",
+    src: "/multi-window-1.jpeg",
+    alt: "Window installation for a multifamily property",
+    label: "Multifamily Windows",
+    mediaType: "image",
+    tags: [
+      "windows",
+      "window-multifamily"
+    ],
+    position: "object-center",
+  },
+  {
+    id: "multi-window-2",
+    src: "/multi-window-2.jpeg",
+    alt: "Window installation for a multifamily property",
+    label: "Multifamily Windows",
+    mediaType: "image",
+    tags: [
+      "windows",
+      "window-multifamily"
+    ],
+    position: "object-center",
+  },
+  {
+    id: "multi-window-3",
+    src: "/multi-window-3.jpeg",
+    alt: "Window installation for a multifamily property",
+    label: "Multifamily Windows",
+    mediaType: "image",
+    tags: [
+      "windows",
+      "window-multifamily"
+    ],
+    position: "object-center",
+  },
+  {
+    id: "multi-window-4",
+    src: "/multi-window-4.jpeg",
+    alt: "Window installation for a multifamily property",
+    label: "Multifamily Windows",
+    mediaType: "image",
+    tags: [
+      "windows",
+      "window-multifamily"
+    ],
+    position: "object-center",
+  },
+  {
+    id: "multi-window-5",
+    src: "/multi-window-5.jpeg",
+    alt: "Window installation for a multifamily property",
+    label: "Multifamily Windows",
+    mediaType: "image",
+    tags: [
+      "windows",
+      "window-multifamily"
+    ],
+    position: "object-center",
+  },
+  {
+    id: "multi-window-6",
+    src: "/multi-window-6.jpeg",
+    alt: "Window installation for a multifamily property",
+    label: "Multifamily Windows",
+    mediaType: "image",
+    tags: [
+      "windows",
+      "window-multifamily"
+    ],
+    position: "object-center",
+  },
+  {
+    id: "multi-window-7",
+    src: "/multi-window-7.jpeg",
+    alt: "Window installation for a multifamily property",
+    label: "Multifamily Windows",
+    mediaType: "image",
+    tags: [
+      "windows", 
+      "window-multifamily"
+    ],
     position: "object-center",
   },
 
   /* ===================== ENTRY DOORS ===================== */
 
-  {
-    id: "entry-door-1",
-    src: "/entry-door-1.jpg",
-    alt: "Residential entry door installation",
-    label: "Entry Door",
-    mediaType: "image",
-    tags: ["doors", "door-entry"],
-    position: "object-center",
-  },
+  
   {
     id: "entry-door-2",
     src: "/entry-door-2.jpeg",
     alt: "Completed exterior entry door project",
     label: "Entry Door",
     mediaType: "image",
-    tags: ["doors", "door-entry"],
+    tags: [
+      "doors",
+      "door-entry",
+      "door-steel-door"
+    ],
     position: "object-center",
   },
   {
@@ -178,7 +310,10 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
     alt: "Completed exterior entry door project",
     label: "Entry Door",
     mediaType: "image",
-    tags: ["doors", "door-entry"],
+    tags: [
+      "doors",
+      "door-entry"
+    ],
     position: "object-center",
   },
   {
@@ -187,7 +322,10 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
     alt: "Completed exterior entry door project",
     label: "Entry Door",
     mediaType: "image",
-    tags: ["doors", "door-entry"],
+    tags: [
+      "doors",
+      "door-entry"
+    ],
     position: "object-center",
   },
   {
@@ -196,7 +334,10 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
     alt: "Completed exterior entry door project",
     label: "Entry Door",
     mediaType: "image",
-    tags: ["doors", "door-entry"],
+    tags: [
+      "doors",
+      "door-entry"
+    ],
     position: "object-center",
   },
 
@@ -204,20 +345,26 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
 
   {
     id: "sliding-door-1",
-    src: "/placeholder-sliding-door-1.jpg",
+    src: "/sliding-door-1.jpeg",
     alt: "Sliding patio door installation",
     label: "Sliding Patio Door",
     mediaType: "image",
-    tags: ["doors", "door-sliding-patio"],
+    tags: [
+      "doors",
+      "door-sliding-patio"
+    ],
     position: "object-center",
   },
   {
     id: "sliding-door-2",
-    src: "/placeholder-sliding-door-2.jpg",
+    src: "/sliding-door-2.JPG",
     alt: "Residential sliding patio door replacement",
     label: "Sliding Patio Door",
     mediaType: "image",
-    tags: ["doors", "door-sliding-patio"],
+    tags: [
+      "doors",
+      "door-sliding-patio"
+    ],
     position: "object-center",
   },
 
@@ -225,84 +372,67 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
 
   {
     id: "hinged-door-1",
-    src: "/placeholder-hinged-door-1.jpg",
+    src: "/hinged-door-2.jpeg",
     alt: "Hinged patio door installation",
     label: "Hinged Patio Door",
     mediaType: "image",
-    tags: ["doors", "door-hinged-patio"],
+    tags: [
+      "doors",
+      "door-hinged-patio"
+    ],
     position: "object-center",
   },
   {
     id: "hinged-door-2",
-    src: "/placeholder-hinged-door-2.jpg",
+    src: "/hinged-door-3.jpeg",
     alt: "French style hinged patio door project",
     label: "Hinged Patio Door",
     mediaType: "image",
-    tags: ["doors", "door-hinged-patio"],
+    tags: [
+      "doors",
+      "door-hinged-patio"
+    ],
     position: "object-center",
   },
 
-  /* ===================== STEEL COMMERCIAL DOORS ===================== */
-
-  {
-    id: "steel-door-1",
-    src: "/placeholder-steel-door-1.jpg",
-    alt: "Steel commercial door installation",
-    label: "Steel Commercial Door",
-    mediaType: "image",
-    tags: ["doors", "door-steel-commercial"],
-    position: "object-center",
-  },
-  {
-    id: "steel-door-2",
-    src: "/placeholder-steel-door-2.jpg",
-    alt: "Commercial steel entrance door project",
-    label: "Steel Commercial Door",
-    mediaType: "image",
-    tags: ["doors", "door-steel-commercial"],
-    position: "object-center",
-  },
-
-  /* ===================== CONDO / MULTIFAMILY DOORS ===================== */
-
-  {
-    id: "multifamily-door-1",
-    src: "/placeholder-multifamily-door-1.jpg",
-    alt: "Door installation for a condominium property",
-    label: "Condominium Door",
-    mediaType: "image",
-    tags: ["doors", "multifamily-condos"],
-    position: "object-center",
-  },
+  /* ===================== STEEL DOORS ===================== */
 
   /* ===================== VIDEOS ===================== */
 
   {
     id: "video-1",
-    src: "/placeholder-video-1.mp4",
-    poster: "/placeholder-video-poster-1.jpg",
+    src: "/vid-1.mp4",
+    poster: "/vid-1-tn.PNG",
     alt: "Window installation project video",
     label: "Window Installation",
     mediaType: "video",
-    tags: ["windows", "window-residential"],
+    tags: [
+      "windows",
+      "window-residential"
+    ],
   },
   {
     id: "video-2",
-    src: "/placeholder-video-2.mp4",
-    poster: "/placeholder-video-poster-2.jpg",
+    src: "/vid-2.mp4",
+    poster: "/vid-2-tn.PNG",
     alt: "Sliding patio door installation video",
-    label: "Sliding Patio Door",
+    label: "Window Installation",
     mediaType: "video",
-    tags: ["doors", "door-sliding-patio"],
+    tags: [
+      "windows"
+    ],
   },
   {
     id: "video-3",
-    src: "/placeholder-video-3.mp4",
-    poster: "/placeholder-video-poster-3.jpg",
+    src: "/vid-3.mp4",
+    poster: "/vid-3-tn.PNG",
     alt: "Multifamily window project video",
-    label: "Multifamily Windows",
+    label: "Window Installation",
     mediaType: "video",
-    tags: ["windows", "multifamily-condos", "window-multifamily"],
+    tags: [
+      "windows",
+      "window-multifamily"
+    ],
   },
 ];
 
@@ -325,10 +455,6 @@ const PRIMARY_FILTERS: {
   {
     label: "Doors",
     value: "doors",
-  },
-  {
-    label: "Multifamily / Condos",
-    value: "multifamily-condos",
   },
   {
     label: "Videos",
@@ -356,10 +482,6 @@ const WINDOW_FILTERS: {
     label: "Multifamily",
     value: "multifamily",
   },
-  {
-    label: "Commercial",
-    value: "commercial",
-  },
 ];
 
 const DOOR_FILTERS: {
@@ -383,8 +505,8 @@ const DOOR_FILTERS: {
     value: "hinged-patio",
   },
   {
-    label: "Steel Commercial",
-    value: "steel-commercial",
+    label: "Steel Doors",
+    value: "steel-door",
   },
 ];
 
@@ -395,7 +517,6 @@ const WINDOW_TAGS: Record<
   residential: "window-residential",
   "townhome-condo": "window-townhome-condo",
   multifamily: "window-multifamily",
-  commercial: "window-commercial",
 };
 
 const DOOR_TAGS: Record<
@@ -405,7 +526,7 @@ const DOOR_TAGS: Record<
   entry: "door-entry",
   "sliding-patio": "door-sliding-patio",
   "hinged-patio": "door-hinged-patio",
-  "steel-commercial": "door-steel-commercial",
+  "steel-door": "door-steel-door",
 };
 
 /* =========================================================
@@ -562,12 +683,6 @@ export default function PortfolioPage() {
       }
     }
 
-    if (filter === "multifamily-condos") {
-      items = items.filter((item) =>
-        item.tags.includes("multifamily-condos")
-      );
-    }
-
     if (filter === "videos") {
       items = items.filter(
         (item) => item.mediaType === "video"
@@ -669,7 +784,7 @@ export default function PortfolioPage() {
       <section className="mx-auto max-w-screen-xl px-4 pb-10 pt-10 sm:px-6 sm:pb-12 sm:pt-12 lg:px-8">
         <div>
           <p className="max-w-3xl text-sm font-medium text-neutral-600">
-            Residential, Multifamily &amp; Commercial Projects
+            Residential, Multifamily &amp; Small Commercial Projects
           </p>
 
           <h1 className="mt-2 max-w-3xl text-[36px]/[1.05] font-semibold tracking-tight sm:text-[48px]/[1.02] lg:whitespace-nowrap">
@@ -1066,10 +1181,6 @@ export default function PortfolioPage() {
               <div>
                 <p className="text-sm font-semibold text-white">
                   {activeItem.label}
-                </p>
-
-                <p className="mt-1 text-sm leading-6 text-white/75">
-                  {activeItem.alt}
                 </p>
 
                 <p className="mt-1 text-xs text-white/50">
