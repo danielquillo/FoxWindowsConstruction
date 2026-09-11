@@ -71,14 +71,14 @@ export default function QuoteForm({ className = "" }: { className?: string }) {
           <option value="" disabled>
             What do you need help with?
           </option>
-          <option value="Service 1">
+          <option value="Window Installation & Replacement">
             Window Installation & Replacement
           </option>
-          <option value="Service 2">
+          <option value="Door Installation">
             Door Installation
           </option>
-          <option value="Service 3">
-            Something Else
+          <option value="Other">
+            Other
           </option>
         </select>
       </div>
