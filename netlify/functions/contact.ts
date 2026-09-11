@@ -1,12 +1,7 @@
 import type { Handler } from "@netlify/functions";
 import { Resend } from "resend";
-import { createClient } from "@supabase/supabase-js";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const supabase = createClient(
-  process.env.SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -96,27 +91,6 @@ export const handler: Handler = async (event) => {
       };
     }
 
-    const { error: insertError } = await supabase
-      .from("quote_requests")
-      .insert({
-        name,
-        email,
-        phone,
-        city: city || null,
-        zip: zip || null,
-        service,
-        message,
-        status: "new",
-      });
-    
-    if (insertError) {
-      console.error("Supabase insert error:", insertError);
-      return {
-        statusCode: 500,
-        body: JSON.stringify({ ok: false, error: "Could not save quote request." }),
-      };
-    }
-
     const OWNER_EMAIL = process.env.OWNER_EMAIL!;
     const FROM_EMAIL = process.env.FROM_EMAIL!; // must be verified in Resend
     const REPLY_TO = email;
@@ -135,12 +109,12 @@ export const handler: Handler = async (event) => {
     // customer confirmation email
     const customerText = 
       `Hi ${name}, \n\n` + 
-      `Thanks for reaching out to SpringRain! We received your request` + 
+      `Thanks for reaching out to Fox Windows Construction! We received your request` + 
       (service ? ` for ${service}` : "") + 
       ` and will get back to you soon.\n\n` + 
-      (phone ? `We may contact you at: ${phone}\n\n` : "") +
-      (message ? `Your message:\n${message}\n\n` : "") + 
-      `- SpringRain\n`;
+      (phone ? `We may contact you at: ${phone}\n\n` : "") + 
+      `Thank you,\n` +
+      `Fox Windows Construction\n`;
     
     
 
@@ -156,7 +130,7 @@ export const handler: Handler = async (event) => {
       resend.emails.send({
         from: FROM_EMAIL,
         to: email,
-        subject: "We received your request - SpringRain",
+        subject: `Request received - ${service} | Fox Windows Construction`,
         text: customerText,
       }),
     ]);
