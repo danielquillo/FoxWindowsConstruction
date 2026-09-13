@@ -1,9 +1,9 @@
 [build]
     command = "npm run build"
-    publish = "out"
+    publish = ".next"
 
 # better caching behavior
 [[headers]]
     for = "/*"
     [headers.values]
-        Cache-Control = "publish, max-age=0, must-revalidate"
+        Cache-Control = "public, max-age=0, must-revalidate"
