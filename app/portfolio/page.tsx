@@ -127,18 +127,6 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
     position: "object-center",
   },
   {
-    id: "window-6",
-    src: "/res-window-6.jpeg",
-    alt: "Large multifamily window installation",
-    label: "Residential Windows",
-    mediaType: "image",
-    tags: [
-      "windows",
-      "window-residential"
-    ],
-    position: "object-center",
-  },
-  {
     id: "window-7",
     src: "/res-window-7.jpg",
     alt: "Commercial window installation project",
@@ -307,18 +295,6 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: "entry-door-3",
     src: "/entry-door-3.jpeg",
-    alt: "Completed exterior entry door project",
-    label: "Entry Door",
-    mediaType: "image",
-    tags: [
-      "doors",
-      "door-entry"
-    ],
-    position: "object-center",
-  },
-  {
-    id: "entry-door-4",
-    src: "/entry-door-4.jpeg",
     alt: "Completed exterior entry door project",
     label: "Entry Door",
     mediaType: "image",
